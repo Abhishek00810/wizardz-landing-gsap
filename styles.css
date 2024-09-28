@@ -397,6 +397,7 @@ nav h1 i {
     color: #48B760;
     font-size: 20px;
 }
+
 .section3child h1 i{
     padding-left: 10px;
     font-size: 30px;
@@ -414,10 +415,19 @@ nav h1 i {
 }
 
 .footerchild1 h1{
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 500;
     color: #fff;
-    padding: 5px 20px
+    padding: 0px 20px;
+}
+
+.footerchild1 button{
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px 20px;
+    border-color: #fff;
+    color: #fff;
 }
 
 .footerchild2 h2{
@@ -432,4 +442,16 @@ nav h1 i {
     font-weight: 500;
     color: #fff;
     padding: 20px 0px 0px 20px;
+}
+
+.biglogo{
+    color: #fff;
+    text-align: center;
+    font-size: 200px;
+}
+.footerparent{
+    background-color: black;
+}
+.biglogo h1 span{
+    display: inline-block;
 }

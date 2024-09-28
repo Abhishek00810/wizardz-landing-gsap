@@ -45,7 +45,6 @@ var tl2 = gsap.timeline({
         start: "top 90%",
         scrub: 2,              // Smooth scroll-based animation, 2 seconds of smoothing
         end: "+=1000",  
-        markers: true
       }
 })
 
@@ -78,3 +77,48 @@ tl2.from(".element.line4",{
 }, "anim+=1")
 
 
+var tl3 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".footerparent",
+        scroller: "body", // Ensure 'body' is correct for your scroller context
+        start: "top 90%",
+        scrub: 2,              // Smooth scroll-based animation, 2 seconds of smoothing
+        end: "+=1000",  
+      }
+})
+
+
+tl3.from(".footer h1, .footer button, .footer h2",{
+    opacity: 0,
+    duration: 1,
+    y:-100
+})
+
+
+let str = document.querySelector('.biglogo h1');
+let text_ = str.textContent;
+let textarray = text_.split("");
+
+var cluster = ""
+textarray.forEach(element => {
+    cluster += `<span class = "a">${element}</span>`
+});
+
+str.innerHTML = cluster
+
+var tl4 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".footerparent",
+        scroller: "body", // Ensure 'body' is correct for your scroller context
+        start: "top 100%",
+        end: "+=1000",  
+      }
+},"+=1")
+
+tl3.from(".biglogo .a", {
+    opacity: 0,
+    duration: 4,
+    y: -100,
+    stagger: 0.3,
+    ease: "power2.out"
+}, "-=2")
